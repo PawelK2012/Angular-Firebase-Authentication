@@ -1,3 +1,6 @@
+
+
+
  var authController = angular.module('authController', []);
  authController.controller('RegistrationController', ['$scope', 'Authentication',
  	function($scope, Authentication) {

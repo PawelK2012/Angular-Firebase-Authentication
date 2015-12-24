@@ -1,3 +1,5 @@
+
+
 myApp.factory('Authentication', ['$rootScope', '$firebaseAuth', '$firebaseObject', '$location', 'FIREBASE_URL',
   function($rootScope, $firebaseAuth, $firebaseObject, $location, FIREBASE_URL) {
     var ref = new Firebase(FIREBASE_URL);

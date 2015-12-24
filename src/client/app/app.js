@@ -12,15 +12,15 @@ myApp.run(['$rootScope', '$location',
 myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
   when('/registration', {
-    templateUrl: 'views/registration.html',
+    templateUrl: 'app/views/registration.html',
     cotroller: 'RegistrationController'
   }).
   when('/login', {
-    templateUrl: 'views/login.html',
+    templateUrl: 'app/views/login.html',
     controller: 'LoginController'
   }).
   when('/success', {
-    templateUrl: 'views/success.html',
+    templateUrl: 'app/views/success.html',
     resolve: {
       currentAuth: function(Authentication) {
           return Authentication.requireAuth();

@@ -10,6 +10,7 @@ To get you started you can simply clone the #Angular-Firebase-Authentication rep
 Clone the Angular-Firebase-Authentication repository using git:
 
 git clone https://github.com/PawelK2012/Angular-Firebase-Authentication.git
+
 cd Angular-Firebase-Authentication
 
 #Install Dependencies

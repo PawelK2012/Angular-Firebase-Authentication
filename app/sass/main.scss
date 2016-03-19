@@ -2,12 +2,11 @@
     // Utils
     @import 'app/sass/colors.scss';
     @import 'app/sass/utils.scss';
-    @import 'app/sass/paper-input.scss';
     // Views
     @import 'app/sass/nav-menu.scss';
     body {
-        background: $blue-50;
+        background: $blue-50;  
         color: $blue-900;
-        font-weight: 300;     
+        font-weight: 300;        
     }
 }

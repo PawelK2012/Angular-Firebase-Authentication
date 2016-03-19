@@ -6,7 +6,7 @@
         .factory('authenticationService', authenticationService);
     function authenticationService($rootScope, $firebase, $firebaseAuth, $firebaseObject, $location) {
 
-        var ref = new Firebase('https://budget-db-app.firebaseio.com/');
+        var ref = new Firebase('https://angular-firebase-aut.firebaseio.com/');
         var auth = $firebaseAuth(ref);
         auth.$onAuth(function(authUser) {
             if (authUser) {
@@ -34,6 +34,7 @@
             }).then(function(regUser) {
                 $location.path('/budget');
             }).catch(function(error) {
+                $rootScope.errorMsg = error.message;
                 console.log(error.message)
             });
         }

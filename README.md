@@ -7,6 +7,7 @@ Full authentication example build with Angular.js/AngularFire and Firebase. View
 - login user
 - log-out
 - view user details
+- angular form validation
 
 #Getting Started
 
@@ -31,6 +32,12 @@ We have preconfigured the project with a simple development web server. The simp
 
  <code> npm start  </code>
 
+#Compile SASS files with Gulp
+
+Inside project directory run command. This will run Gulp task to watch all SASS files and concat them into one CSS file.
+
+ <code> gulp </code>
+
 #Updating dependencies
 
 You can update the tool dependencies by running:
@@ -45,6 +52,6 @@ You can update the Angular dependencies by running:
 #TO DO
 
 - [ ] setup build
-- [ ] setup form validation 
+- [x] add form validation 
 - [ ] allow user to update profile
 - [ ] add Facebook & Google login

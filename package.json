@@ -4,7 +4,6 @@
   "description": "Budget app - an app that helps you manage your monthly budget on the go.",
   "main": "index.js",
   "dependencies": {
-    "bootstrap-sass": "^3.3.6",
     "bower": "^1.7.7",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",

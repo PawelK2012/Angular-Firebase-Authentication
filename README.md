@@ -1,5 +1,5 @@
 #Angular-Firebase-Authentication
-Full authentication example build with Angular.js and Firebase. View <a href="http://pawelkaim.com/d/angular-firebase-auth/app/#/authentication">demo project</a>
+Full authentication example build with Angular.js/AngularFire and Firebase. View <a href="http://pawelkaim.com/d/angular-firebase-auth/app/#/authentication">demo project</a>
 
 #Project features: 
 

@@ -1,15 +1,27 @@
 <div class="container authentication">
     <div class="row" ng-show="!vm.logMe && !vm.regMe">
         <div class="col-xs-12">
-            <h1 class="text-center" ng-show="currentUser">Hello {{currentUser.firstname}}!</h1>
-            <h2 class="text-center">#Angular-Firebase-Authentication</h2>
-            <p class="text-center">An example app of AngularFire Firebase authentication</p>
+            <div class="center-block text-center">
+                <h1 ng-show="currentUser">Hello {{currentUser.firstname}}!</h1>
+                <h2 data-ng-if="!currentUser">#Angular-Firebase-Authentication</h2>
+                <p data-ng-if="!currentUser">An example app of AngularFire Firebase authentication</p>
+                <div data-ng-if="currentUser">
+                <p>Check your <strong><a ng-href="#/user">profile page</a></strong> if you want to:</p>
+                <ul class="list-unstyled">
+                    <li>View your details</li>
+                    <li>Change your email address</li>
+                </ul>
+                <a ng-href="#/user" class="btn btn-default btn-lg" >Go!</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row" ng-show="!vm.logMe && !vm.regMe">
-        <div class="col-xs-12 col-sm-offset-5">
-            <button ng-show="!currentUser" type="button" class="btn btn-default btn-lg" data-ng-click="vm.logMe = true">Login</button>
-            <button ng-show="!currentUser" type="button" class="btn btn-default btn-lg" data-ng-click="vm.regMe = true">Register</button>
+        <div class="col-xs-12">
+            <div class="center-block text-center">
+                <button ng-show="!currentUser" type="button" class="btn btn-default btn-lg" data-ng-click="vm.logMe = true">Login</button>
+                <button ng-show="!currentUser" type="button" class="btn btn-default btn-lg" data-ng-click="vm.regMe = true">Register</button>
+            </div>
         </div>
     </div>
     <div class="row" ng-show="vm.logMe">
@@ -32,7 +44,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default pull-right" ng-disabled="loginForm.$invalid">Sign in</button>
+                        <button type="submit" class="btn btn-default pull-right" ng-disabled="loginForm.$invalid">Login</button>
                         <p data-ng-click="vm.logMe = false">Go back</p>
                     </div>
                 </div>
@@ -41,6 +53,7 @@
     </div>
     <div class="row" ng-show="vm.regMe">
         <div class="col-md-5 col-md-offset-3">
+            <p class="bg-danger" ng-show="errorMsg">{{errorMsg}}</p>
             <form name="registerForm" class="form-horizontal" ng-submit="vm.register(vm.name, vm.email, vm.pass)">
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Your name</label>
@@ -65,7 +78,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default pull-right" ng-disabled="registerForm.$invalid">Sign in</button>
+                        <button type="submit" class="btn btn-default pull-right" ng-disabled="registerForm.$invalid">Register</button>
                         <p data-ng-click="vm.regMe = false">Go back</p>
                     </div>
                 </div>

@@ -27,5 +27,9 @@
         var vm = this;
         vm.currentUser = $rootScope.currentUser;
 
+        vm.updateEmail = function(emailOld, emailNew, pass) {
+            authenticationService.changeEmail(emailOld, emailNew, pass);
+        }
+
     };
 })();

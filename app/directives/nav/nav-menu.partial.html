@@ -7,23 +7,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#/authentication">#Angular-Firebase-Authentication</a>
+            <a class="navbar-brand" ng-href="#/authentication">#Angular-Firebase-Authentication</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li ng-show="!$root.currentUser"><a href="#/authentication">Login</a></li>
+                <li data-ng-if="!$root.currentUser"><a data-toggle="collapse" data-target="#navbar" ng-href="#/authentication">Login</a></li>
+                <li data-ng-if="$root.currentUser"><a data-toggle="collapse" data-target="#navbar" ng-href="#/user">Profile</a></li>
+                <li data-ng-if="$root.currentUser"><a data-toggle="collapse" data-target="#navbar" ng-href="#" data-ng-click="vm.logOut()">Logout</a></li>
             </ul>
-            <div class="dropdown nav navbar-nav navbar-right" ng-show="$root.currentUser">
-                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                 Hi {{$root.currentUser.firstname}}
-                 <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#/user">Profile</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#" data-ng-click="vm.logOut()">Logout</a></li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li data-ng-if="$root.currentUser" class="pull-right"><a ng-href="#"> Hi {{$root.currentUser.firstname}}</a></li>
+            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>
